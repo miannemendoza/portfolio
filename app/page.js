@@ -17,7 +17,7 @@ import web5 from "../public/web5.png";
 import web6 from "../public/web6.png";
 import lm from "../public/lm.png";
 import wink from "../public/wink.png";
-
+import { TypeAnimation } from "react-type-animation";
 import Starfield from "react-starfield";
 import { useState } from "react";
 export default function Home() {
@@ -33,17 +33,14 @@ export default function Home() {
       <div className=" px-10 md:px-20 lg:px-40  ">
         <section className="min-h-screen">
           <nav className="p-10 mb-12 flex justify-between">
-            {/* <h1 className="text-xl  font-burtons dark:text-white">
-              developedbymich
-            </h1> */}
             <Image alt="Portfolio Icon" src={lm} width={55} height={55} />
             <ul className="flex items-center dark:text-white">
-              <li className="cursor-pointer text-2xl">
+              {/* <li className="cursor-pointer text-2xl">
                 <BsFillMoonStarsFill onClick={() => setIsDarkMode(!darkMode)} />
-              </li>
+              </li> */}
               <li>
                 <a
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+                  className="bg-gradient-to-r from-[#e31b6d] to-[#ff6a00] text-white px-4 py-2 rounded-md ml-8"
                   href="/resume.pdf"
                   download="resume"
                 >
@@ -52,20 +49,44 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-          <div className="border border-amber-900 border-t-1">
-            <div className="text-center p-10">
-              <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
+          <div className="text-left flex items-center">
+            <div className="p-10">
+              <h1 className="text-6xl pb-2 text-[#ff6a00] font-bold md:text-6xl">
+                Hi, I am
+              </h1>
+
+              <h1 className="text-4xl py-2 text-[#e31b6d] font-medium md:text-6xl">
                 Michelle Anne F. Mendoza
-              </h2>
-              <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
+              </h1>
+              <TypeAnimation
+                sequence={[
+                  "Software Engineer   ",
+                  2000,
+                  "Front-End Developer   ",
+                  2000,
+                  "Web Developer   ",
+                  2000,
+                ]}
+                omitDeletionAnimation={true}
+                wrapper="span"
+                cursor={true}
+                repeat={Infinity}
+                speed={10}
+                style={{
+                  fontSize: "2em",
+                  display: "inline-block",
+                  color: "white",
+                }}
+              />
+              {/* <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
                 Software Engineer and Full Stack developer
-              </h3>
-              <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-white">
+              </h3> */}
+              <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mr-auto dark:text-white">
                 {` I'm a software engineer who loves to create amazing apps that
               helps people. Join me down below and let's get something started.`}
               </p>
             </div>
-            <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-white">
+            {/* <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-white">
               <a
                 href="https://www.linkedin.com/in/michelle-anne-m-03b95a232"
                 target="_blank"
@@ -73,11 +94,10 @@ export default function Home() {
               >
                 <AiFillLinkedin />
               </a>
-              {/* <AiFillGoogleCircle /> */}
               <SiGmail />
               <FaDiscord />
-            </div>
-            <div className="relative bg-gradient-to-b from-teal-500 overflow-hidden rounded-full w-80 h-80 mt-20 mx-auto md:h-96 md:w-96">
+            </div> */}
+            <div className="relative bg-gradient-to-r from-[#e31b6d] to-[#ff6a00] overflow-hidden rounded-full w-80 h-80 mt-20 ml-auto md:h-96 md:w-96">
               <Image
                 alt="Bitmoji image of the portfolio owner"
                 src={wink}
