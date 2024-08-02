@@ -1,8 +1,9 @@
-import { Inter, Archivo } from "next/font/google";
+import { Inter, Archivo, Rubik } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 const archivo = Archivo({ subsets: ["latin"] });
+const rubik = Rubik({ subsets: ["latin"] });
 export const metadata = {
   title: "Michelle Mendoza Portfolio",
   description: "Come check my portfolio!",
@@ -11,7 +12,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${archivo.className} antialiased`}>{children}</body>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <body className={`${rubik.className} antialiased`}>{children}</body>
     </html>
   );
 }

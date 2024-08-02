@@ -30,32 +30,28 @@ export default function Home() {
         speedFactor={0.05}
         backgroundColor="black"
       />
-      <div className=" px-10 md:px-20 lg:px-40  ">
+      <div className=" px-10 md:px-20 lg:px-40 ">
         <section className="min-h-screen">
-          <nav className="p-10 mb-12 flex justify-between">
+          <nav className="py-10 mb-12 flex justify-between">
             <Image alt="Portfolio Icon" src={lm} width={55} height={55} />
-            <ul className="flex items-center dark:text-white">
-              {/* <li className="cursor-pointer text-2xl">
-                <BsFillMoonStarsFill onClick={() => setIsDarkMode(!darkMode)} />
-              </li> */}
-              <li>
-                <a
-                  className="bg-gradient-to-r from-[#e31b6d] to-[#ff6a00] text-white px-4 py-2 rounded-md ml-8"
-                  href="/resume.pdf"
-                  download="resume"
-                >
-                  Resume
-                </a>
-              </li>
-            </ul>
+            <a
+              className="h-11 bg-gradient-to-r from-[#e31b6d] to-[#ff6a00] text-white py-2 px-4 rounded-md ml-8 text-lg sm:text-base "
+              href="/resume.pdf"
+              download="resume"
+            >
+              Resume
+            </a>
           </nav>
-          <div className="text-left flex items-center">
-            <div className="p-10">
-              <h1 className="text-6xl pb-2 text-[#ff6a00] font-bold md:text-6xl">
+          <div className="flex flex-col text-left sm:flex-row justify-between items-center">
+            <div className="">
+              {/* <h1 className="text-6xl pb-2 text-[#ff6a00] font-bold md:text-6xl">
                 Hi, I am
-              </h1>
-
-              <h1 className="text-4xl py-2 text-[#e31b6d] font-medium md:text-6xl">
+              </h1> */}
+              <p className="text-2xl pb-2 text-[#ff6a00] font-bold md:text-6xl">
+                {" "}
+                Hi, I am
+              </p>
+              <h1 className="text-4xl md:text-6xl py-2 text-[#e31b6d] font-medium">
                 Michelle Anne F. Mendoza
               </h1>
               <TypeAnimation
@@ -72,37 +68,23 @@ export default function Home() {
                 cursor={true}
                 repeat={Infinity}
                 speed={10}
-                style={{
-                  fontSize: "2em",
-                  display: "inline-block",
-                  color: "white",
-                }}
+                className="text-3xl md:text-5xl text-white"
               />
               {/* <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
                 Software Engineer and Full Stack developer
               </h3> */}
-              <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mr-auto dark:text-white">
-                {` I'm a software engineer who loves to create amazing apps that
-              helps people. Join me down below and let's get something started.`}
+              <p className="lg:text-base text-sm py-5 leading-8 text-gray-800 md:text-xl max-w-xl mr-auto dark:text-white">
+                {` I’m an enthusiastic software engineer with a strong passion for website development, particularly in front-end development. My dedication to learning and improving means I'm always ready to take on new challenges and expand my skill set to keep up with the latest advancements in the field. Join me down below and let's get something started.`}
               </p>
             </div>
-            {/* <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-white">
-              <a
-                href="https://www.linkedin.com/in/michelle-anne-m-03b95a232"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <AiFillLinkedin />
-              </a>
-              <SiGmail />
-              <FaDiscord />
-            </div> */}
-            <div className="relative bg-gradient-to-r from-[#e31b6d] to-[#ff6a00] overflow-hidden rounded-full w-80 h-80 mt-20 ml-auto md:h-96 md:w-96">
+
+            <div className="relative bg-gradient-to-r from-[#e31b6d] to-[#ff6a00] overflow-hidden rounded-full w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 md:mt-20 mb-20">
               <Image
-                alt="Bitmoji image of the portfolio owner"
                 src={wink}
                 layout="fill"
                 objectFit="cover"
+                className="absolute top-0 left-0 w-full h-full rounded-full z-10"
+                alt="Responsive Image"
               />
             </div>
           </div>
@@ -110,84 +92,109 @@ export default function Home() {
         {/* HEADER DONE */}
         <section>
           <div className="dark:text-white">
-            <h3 className="text-3xl py-1 ">Services I offer</h3>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <h3 className="lg:text-3xl py-1 text-2xl font-bold ">
+              Services I offer
+            </h3>
+            <p className="lg:text-base text-sm py-2 leading-8 text-gray-800 dark:text-white">
+              As a software engineer with over two years of experience, I excel
+              at collaborating with talented teams to engineer web solutions
+              that address real-world challenges. With a solid foundation in web
+              development, database management, and software engineering, I
+              offer comprehensive services in both front-end and back-end
+              technologies.
+              {/* For front-end development, I use React.js, Next.js,
+              Tailwind CSS, and React Native. On the back-end, I leverage
+              JavaScript and Golang to build robust and scalable solutions. */}
             </p>
-            <p>
+            {/* <p className="lg:text-base text-sm py-2 leading-8 text-gray-800 dark:text-white">
               I offer from a wide range of services, including programming,
               designing and technical consult
-            </p>
+            </p> */}
           </div>
-          <div className="lg:flex gap-10 dark:text-white">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image
-                alt=""
-                src={design}
-                width={100}
-                height={100}
-                className="inline"
-              />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
-              </h3>
-              <p className="py-2">
-                Creating elegant designs suited for your needs
-              </p>
-              <h4 className="text-teal-600 py-4">Design tools I used: </h4>
-              <p className="text-gray-800 py-1 dark:text-white">Photoshop</p>
-              <p className="text-gray-800 py-1 dark:text-white">Figma</p>
-              <p className="text-gray-800 py-1 dark:text-white">Illustrator</p>
+
+          <div className="  text-white">
+            <div className="text-left shadow-lg rounded-xl my-10">
+              <h3 className="text-lg font-medium pt-8 pb-2">Backend</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-2 gap-y-2">
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  {" "}
+                  Golang
+                </p>
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  {" "}
+                  NextJS
+                </p>
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  {" "}
+                  Vite
+                </p>
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  {" "}
+                  Typescript{" "}
+                </p>
+              </div>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image
-                alt=""
-                src={code}
-                width={100}
-                height={100}
-                className="inline"
-              />
-              <h3 className="text-lg font-medium pt-8 pb-2">Clean Code</h3>
-              <p className="py-2">
-                Creating elegant designs suited for your needs
-              </p>
-              <h4 className="text-teal-600 py-4">Design tools I used: </h4>
-              <p className="text-gray-800 py-1 dark:text-white">Photoshop</p>
-              <p className="text-gray-800 py-1 dark:text-white">Figma</p>
-              <p className="text-gray-800 py-1 dark:text-white">Illustrator</p>
+            <div className="text-left shadow-lg rounded-xl my-10">
+              <h3 className="text-lg font-medium pt-8 pb-2">Frontend</h3>
+
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-2 gap-y-2">
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  ReactJS
+                </p>
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  NextJS
+                </p>
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  React Native
+                </p>
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  JavaScript
+                </p>
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  Typescript
+                </p>
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  Tailwind CSS
+                </p>
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  Bootstrap
+                </p>
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  HTML
+                </p>
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  CSS
+                </p>
+              </div>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image
-                alt=""
-                src={consulting}
-                width={100}
-                height={100}
-                className="inline"
-              />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Analytical Consult
-              </h3>
-              <p className="py-2">
-                Creating elegant designs suited for your needs
-              </p>
-              <h4 className="text-teal-600 py-4">Design tools I used: </h4>
-              <p className="text-gray-800 py-1 dark:text-white">Photoshop</p>
-              <p className="text-gray-800 py-1 dark:text-white">Figma</p>
-              <p className="text-gray-800 py-1 dark:text-white">Illustrator</p>
+            <div className="text-left shadow-lg rounded-xl my-10">
+              <h3 className="text-lg font-medium pt-8 pb-2">Tools</h3>
+
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-2 gap-y-2">
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  Github
+                </p>
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  VS Code
+                </p>
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  Figma
+                </p>
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  Docker
+                </p>
+                <p className="flex w-auto items-center rounded-md p-3 bg-black bg-opacity-30 dark:bg-[#ffffff0a] dark:backdrop-blur-md text-[#ff6a00]">
+                  Figma
+                </p>
+              </div>
             </div>
           </div>
         </section>
         <section>
           <div className="dark:text-white">
-            <h3 className="text-3xl py-1 ">Portfolio </h3>
+            <h3 className="lg:text-3xl py-1 text-2xl font-bold ">Portfolio </h3>
             <div>
-              <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
+              <p className="lg:text-base text-sm py-2 leading-8 text-gray-800 dark:text-white">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -196,7 +203,7 @@ export default function Home() {
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
-              <p>
+              <p className="lg:text-base text-sm py-2 leading-8 text-gray-800 dark:text-white">
                 I offer from a wide range of services, including programming,
                 designing and technical consult
               </p>
