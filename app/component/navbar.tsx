@@ -73,7 +73,7 @@ const Navbar = () => {
             >
               Work
             </li>
-            <li
+            {/* <li
               className={` ${
                 selected === "connect"
                   ? "border-b-2 border-[#ff6a00]"
@@ -85,7 +85,7 @@ const Navbar = () => {
               }}
             >
               Connect
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

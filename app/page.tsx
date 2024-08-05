@@ -58,6 +58,40 @@ export default function PageContent() {
         {/* Vertical Border */}
         <div className="border-l-2 border-gray-400 h-44 mt-4"></div>
       </div>
+
+      <footer className="rounded-lg shadow m-4  sm:hidden ">
+        <div className="w-full text-center mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+          <ul className="flex justify-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+            <li>
+              <a href="#" className="hover:underline me-4 md:me-6">
+                Linkedin
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline me-4 md:me-6">
+                Gmail
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline me-4 md:me-6">
+                Discord
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Github
+              </a>
+            </li>
+          </ul>
+          <span className="text-sm text-gray-500  dark:text-gray-400">
+            © 2024{" "}
+            <a href="https://flowbite.com/" className="hover:underline">
+              Michelle Anne F. Mendoza™
+            </a>
+            . All Rights Reserved.
+          </span>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -17,7 +17,9 @@ const ExperienceComponent = () => {
         <div className="grid grid-cols-10 gap-4 w-auto items-center  rounded-md p-3  text-[#ff6a00]">
           <div className="relative grid grid-cols-3 gap-4 col-span-full sm:col-span-2 sm:flex sm:flex-col text-center  sm:items-end items-center sm:text-right">
             <p
-              className={`${selected === "hs" && "font-bold"} cursor-pointer`}
+              className={`${
+                selected === "hs" && "font-bold"
+              } text-lg cursor-pointer`}
               onClick={() => setSelected("hs")}
             >
               Hooli Software
@@ -32,32 +34,81 @@ const ExperienceComponent = () => {
               className={`${selected === "sos" && "font-bold"} cursor-pointer`}
               onClick={() => setSelected("sos")}
             >
-              SOS
+              S.O.Search
             </p>
           </div>
-          <div className="col-span-full h-64 sm:col-span-8 p-4 border-l bg-opacity-50 dark:bg-[#ffffff0a] text-white">
+          <div className="col-span-full h-64 sm:col-span-8 p-4 border-l bg-opacity-50 dark:bg-[#ffffff0a] text-white overflow-scroll no-scrollbar">
             {selected === "cb" ? (
               <>
                 <h1 className="text-2xl font-medium text-[#ff6a00]">
                   Fullstack Software Engineer
                 </h1>
                 <p className="text-[#ff6a00c8] mb-4">
-                  June 2022 - January 2023
+                  June 2022 - Feburuary 2024
                 </p>
-                <ul>
-                  <li>
+                <ul className="pl-5">
+                  <li className="list-disc">
                     Spearheaded the backend development of IAC and OCI Registry
-                    module of Carbonetes Lite
+                    module of Carbonetes Lite Spearheaded the backend
+                    development of the IAC and OCI Registry of Carbonetes Lite,
+                    including the development of the Manage License module.
                   </li>
-                  <li>
+                  <li className="list-disc">
                     Ensured the application's integrity after development by
                     implementing improvements, refining its performance, and
                     integrating new features.
                   </li>
-                  <li>
+                  <li className="list-disc">
                     Collaborated with teams to address issues, introduce new
                     functionalities, and enhance the overall performance of the
                     app
+                  </li>
+                </ul>
+
+                <h1 className="text-2xl font-medium mt-2 text-[#ff6a00]">
+                  Software Engineer Intern
+                </h1>
+                <p className="text-[#ff6a00c8] mb-4">March 2022 - June 2022</p>
+                <ul className="pl-5">
+                  <li className="list-disc">
+                    Assisted the team with bug fixes and improvements to enhance
+                    application performance.
+                  </li>
+                  <li className="list-disc">
+                    Developed a Postman collection to document APIs used by the
+                    app effectively.
+                  </li>
+                  <li className="list-disc">
+                    Created PowerPoint presentations summarizing software
+                    engineering updates and overall progress for team briefings.
+                  </li>
+                </ul>
+              </>
+            ) : selected === "sos" ? (
+              <>
+                <h1 className="text-2xl font-medium text-[#ff6a00]">
+                  Fullstack Software Engineer
+                </h1>
+                <p className="text-[#ff6a00c8] mb-4">
+                  Feburuary 2024 - Present
+                </p>
+                <ul className="pl-5">
+                  <li className="list-disc">
+                    Contributed to the migration of the application from React
+                    Native to Expo, leveraging new technologies to improve
+                    performance.
+                  </li>
+                  <li className="list-disc">
+                    Occasionally handled the iOS and Android deployment of the
+                    application.
+                  </li>
+                  <li className="list-disc">
+                    Implemented bug fixes and enhancements to ensure a
+                    user-friendly application with no critical issues.
+                  </li>
+                  <li className="list-disc">
+                    Mentored and guided interns to help them learn and
+                    effectively contribute to the team.
                   </li>
                 </ul>
               </>
@@ -68,11 +119,8 @@ const ExperienceComponent = () => {
                 </h1>
                 <p className="text-[#ff6a00c8] mb-4">June 2022 - Present</p>
                 <p>
-                  {` For front-end development, I use React.js, Next.js,
-              Tailwind CSS, and React Native. On the back-end, I leverage
-              JavaScript and Golang to build robust and scalable solutions. For front-end development, I use React.js, Next.js,
-              Tailwind CSS, and React Native. On the back-end, I leverage
-              JavaScript and Golang to build robust and scalable solutions.`}
+                  {`Currently working as a Full-Stack Software Engineer,
+                   contributing to two key projects: Carbonetes and Significant Other Search.`}
                 </p>
               </>
             )}
