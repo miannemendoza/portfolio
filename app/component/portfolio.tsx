@@ -1,83 +1,70 @@
 import React from "react";
-import web1 from "../../public/web1.png";
-import web2 from "../../public/web2.png";
-import web3 from "../../public/web3.png";
-import web4 from "../../public/web4.png";
-import web5 from "../../public/web5.png";
-import web6 from "../../public/web6.png";
+import mk from "../../public/mk.png";
+import db from "../../public/db.jpg";
 import Image from "next/image";
+import PillButton from "./shared/pill";
 const PortfolioComponent = () => {
   return (
-    <section id="work" className="py-28">
+    <section id="work" className="py-28 leading-8">
       <div className="dark:text-white">
-        <h3 className="lg:text-4xl py-1 text-2xl font-bold ">Portfolio </h3>
+        <h3 className="lg:text-4xl py-1 text-3xl font-bold ">Portfolio </h3>
         <div>
           <p className="lg:text-base text-sm py-2 leading-8 text-gray-800 dark:text-white">
-            {` Check out some things that I've built`}
+            {` Check out some things that I've built: `}
           </p>
           <div className="border-t border-gray-300 my-4 opacity-15" />
         </div>
       </div>
-      <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-        <div className="basis-1/3 flex-1">
+      <div className="grid grid-cols-10 gap-4 w-auto items-center  rounded-md p-3  text-[#ff6a00]">
+        <div className="col-span-full md:col-span-5 flex-1">
           <Image
             alt=""
-            src={web1}
-            className="rounded-lg object-cover"
+            src={mk}
+            className="rounded-lg "
             width={100}
             height={100}
             layout="responsive"
           />
         </div>
-        <div className="basis-1/3 flex-1">
+        <div className="col-span-full md:col-span-5 flex-1">
+          <h1 className="sm:text-3xl text-2xl  font-medium">Meme Kaive</h1>
+          <div className="border-t-2 border-gray-400  my-4"></div>
+          <span className=" text-sm sm:text-base  text-white ">
+            Meme Kaive is a web applictaion that allows user to add their own
+            entries of meme to be stored and allow others to see. Like a library
+            but for memes
+          </span>
+
+          <div className="mt-4 flex items-center">
+            <PillButton value="NextJS" />
+            <PillButton value="TailwindCSS" />
+            <PillButton value="MongoDB" />
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-10 gap-4 w-auto items-center  rounded-md p-3  text-[#ff6a00]">
+        <div className="col-span-full md:col-span-5 flex-1">
           <Image
             alt=""
-            src={web2}
-            className="rounded-lg object-cover"
+            src={db}
+            className="rounded-lg "
             width={100}
             height={100}
             layout="responsive"
           />
         </div>
-        <div className="basis-1/3 flex-1">
-          <Image
-            alt=""
-            src={web3}
-            className="rounded-lg object-cover"
-            width={100}
-            height={100}
-            layout="responsive"
-          />
-        </div>
-        <div className="basis-1/3 flex-1">
-          <Image
-            alt=""
-            src={web4}
-            className="rounded-lg object-cover"
-            width={100}
-            height={100}
-            layout="responsive"
-          />
-        </div>
-        <div className="basis-1/3 flex-1">
-          <Image
-            alt=""
-            src={web5}
-            className="rounded-lg object-cover"
-            width={100}
-            height={100}
-            layout="responsive"
-          />
-        </div>
-        <div className="basis-1/3 flex-1">
-          <Image
-            alt=""
-            src={web6}
-            className="rounded-lg object-cover"
-            width={100}
-            height={100}
-            layout="responsive"
-          />
+        <div className="col-span-full md:col-span-5 flex-1 ">
+          <h1 className="sm:text-3xl text-2xl  font-medium">Flop Bot</h1>
+          <div className="border-t-2 border-gray-400  my-4" />
+          <span className=" text-sm sm:text-base  text-white ">
+            Flop bot is a discord bot written in golang. You can add it to your
+            own discord channel and make use of the commands that it has!
+          </span>
+
+          <div className="mt-4 flex items-center">
+            <PillButton value="Golang" />
+            <PillButton value="Discord API" />
+          </div>
         </div>
       </div>
     </section>

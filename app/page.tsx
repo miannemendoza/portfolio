@@ -31,20 +31,18 @@ export default function PageContent() {
         <ExperienceComponent />
         <PortfolioComponent />
       </div>
+      {/* socials */}
       <div className=" flex-col px-10 fixed top-[66%] hidden sm:flex">
-        {/* Icons */}
         <div className="space-y-4 -ml-3">
           <FaLinkedinIn className="text-2xl text-gray-400" />
           <FaGithub className="text-2xl text-gray-400" />
           <SiGmail className="text-2xl text-gray-400" />
         </div>
 
-        {/* Vertical Border */}
         <div className="border-l-2 border-gray-400 h-44 mt-4  items-start"></div>
       </div>
 
       <div className="fixed right-4 hidden sm:flex flex-col items-center top-[75%]">
-        {/* Icons */}
         <div className="flex flex-col items-center space-y-4">
           <a
             className="transform rotate-90   text-gray-400 pr-8"
@@ -55,8 +53,7 @@ export default function PageContent() {
           </a>
         </div>
 
-        {/* Vertical Border */}
-        <div className="border-l-2 border-gray-400 h-44 mt-4"></div>
+        <div className="border-l-2 border-gray-400 h-40 mt-4"></div>
       </div>
 
       <footer className="rounded-lg shadow m-4  sm:hidden ">

@@ -73,19 +73,6 @@ const Navbar = () => {
             >
               Work
             </li>
-            {/* <li
-              className={` ${
-                selected === "connect"
-                  ? "border-b-2 border-[#ff6a00]"
-                  : "font-thin"
-              } text-white hover:text-gray-400 pb-2 `}
-              onClick={() => {
-                setSelected("connect");
-                scrollToCenter("connect");
-              }}
-            >
-              Connect
-            </li> */}
           </ul>
         </div>
       </div>

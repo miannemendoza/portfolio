@@ -5,10 +5,10 @@ const AboutMePage = () => {
     <>
       <section id="about-me" className="py-40">
         <div className="text-white">
-          <h3 className="lg:text-4xl py-1 text-2xl font-bold ">About Me </h3>
-          <div className="border-t border-gray-300 my-4 opacity-15" />
+          <h3 className="lg:text-4xl py-1 text-3xl font-bold ">About Me </h3>
+          <div className="border-t border-gray-300 my-3 opacity-15" />
           <div>
-            <p>
+            <p className="sm:text-base text-sm leading-8">
               Hello there! My name is Michelle, and I’m passionate about
               creating websites that simplify daily life. My interest in web
               development began when I discovered an impressive web portfolio.
