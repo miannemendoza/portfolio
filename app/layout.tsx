@@ -1,7 +1,6 @@
 import { Inter, Archivo, Rubik } from "next/font/google";
 import "./globals.css";
-import PageContent from "./page";
-import Starfield from "react-starfield";
+import { useState, useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 const archivo = Archivo({ subsets: ["latin"] });
