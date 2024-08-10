@@ -1,8 +1,9 @@
 import React from "react";
-import mk from "../../public/mk.png";
+import mk from "../../public/MemeKaive.png";
 import db from "../../public/db.jpg";
 import Image from "next/image";
 import PillButton from "./shared/pill";
+import { FaExternalLinkAlt } from "react-icons/fa";
 const PortfolioComponent = () => {
   return (
     <section id="work" className="py-28 leading-8">
@@ -27,18 +28,26 @@ const PortfolioComponent = () => {
           />
         </div>
         <div className="col-span-full md:col-span-5 flex-1">
-          <h1 className="sm:text-3xl text-2xl  font-medium">Meme Kaive</h1>
+          <div className="flex flex-row items-center">
+            <h1 className="sm:text-3xl text-2xl  font-medium">
+              Meme Kaive &nbsp;{" "}
+            </h1>
+            <a href="https://memekaive.vercel.app/" target="_blank">
+              <FaExternalLinkAlt className="w-4 h-4" />
+            </a>
+          </div>
           <div className="border-t-2 border-gray-400  my-4"></div>
           <span className=" text-sm sm:text-base  text-white ">
-            Meme Kaive is a web applictaion that allows user to add their own
-            entries of meme to be stored and allow others to see. Like a library
-            but for memes
+            Meme Kaie is a web app where you can add, edit, and delete your own
+            memes, making them available for others to see. Think of it like a
+            meme library. Plus, you can easily sign in with Google.
+            <br />
           </span>
-
           <div className="mt-4 flex items-center">
             <PillButton value="NextJS" />
             <PillButton value="TailwindCSS" />
             <PillButton value="MongoDB" />
+            <PillButton value="DaisyUI" />
           </div>
         </div>
       </div>
