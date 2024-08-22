@@ -67,10 +67,14 @@ export default function PageContent() {
             </div>
             {/* socials */}
             <div className=" flex-col px-10 fixed top-[66%] hidden sm:flex">
-              <div className="space-y-4 -ml-3">
-                <FaLinkedinIn className="text-2xl text-gray-400" />
+              <div className="space-y-4 -ml-3 cursor-pointer">
+                <a
+                  href="https://www.linkedin.com/in/michelle-anne-mendoza-03b95a232"
+                  target="_blank"
+                >
+                  <FaLinkedinIn className="text-2xl text-gray-400 " />
+                </a>
                 <FaGithub className="text-2xl text-gray-400" />
-                <SiGmail className="text-2xl text-gray-400" />
               </div>
 
               <div className="border-l-2 border-gray-400 h-44 mt-4  items-start"></div>
@@ -81,6 +85,7 @@ export default function PageContent() {
                 <a
                   className="transform rotate-90   text-gray-400 pr-8"
                   href="https://youtu.be/dQw4w9WgXcQ?si=7uvVo87Wzit1JGhW"
+                  target="_blank"
                 >
                   {" "}
                   ?????
@@ -94,15 +99,15 @@ export default function PageContent() {
               <div className="w-full text-center mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
                 <ul className="flex justify-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
                   <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">
+                    <a
+                      href="https://www.linkedin.com/in/michelle-anne-mendoza-03b95a232"
+                      className="hover:underline me-4 md:me-6"
+                      target="_blank"
+                    >
                       Linkedin
                     </a>
                   </li>
-                  <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">
-                      Gmail
-                    </a>
-                  </li>
+
                   <li>
                     <a href="#" className="hover:underline me-4 md:me-6">
                       Discord
