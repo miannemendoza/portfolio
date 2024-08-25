@@ -38,7 +38,7 @@ const PortfolioComponent = () => {
           </div>
           <div className="border-t-2 border-gray-400  my-4"></div>
           <span className=" text-sm sm:text-base  text-white ">
-            Meme Kaie is a web app where you can add, edit, and delete your own
+            Meme Kaive is a web app where you can add, edit, and delete your own
             memes, making them available for others to see. Think of it like a
             meme library. Plus, you can easily sign in with Google.
             <br />
@@ -51,7 +51,7 @@ const PortfolioComponent = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-10 gap-4 w-auto items-center  rounded-md p-3  text-[#ff6a00]">
+      {/* <div className="grid grid-cols-10 gap-4 w-auto items-center  rounded-md p-3  text-[#ff6a00]">
         <div className="col-span-full md:col-span-5 flex-1">
           <Image
             alt=""
@@ -75,7 +75,7 @@ const PortfolioComponent = () => {
             <PillButton value="Discord API" />
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

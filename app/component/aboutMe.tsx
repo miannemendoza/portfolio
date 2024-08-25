@@ -10,13 +10,13 @@ const AboutMePage = () => {
           <div>
             <p className="sm:text-base text-sm leading-8">
               Hello there! My name is Michelle, and I’m passionate about
-              creating websites that simplify daily life. My interest in web
-              development began when I discovered an impressive web portfolio.
-              Inspired by its potential, I realized that I could do the same,
-              and that’s when my journey in web development took off. I earned
-              my Bachelor of Science in Information Technology from Don Honorio
-              Ventura State University. When I’m not coding or working on
-              projects, I enjoy playing games or watching anime.
+              building and developing websites. My interest in web development
+              began when I discovered an impressive web portfolio. Inspired by
+              its potential, I realized that I could do the same, and that’s
+              when my journey in web development took off. I earned my Bachelor
+              of Science in Information Technology from Don Honorio Ventura
+              State University. When I’m not coding or working on projects, I
+              enjoy playing games or watching anime.
               <br />
               <span className="block mt-4">
                 I currently have 2 years of experience in Software Engineering
