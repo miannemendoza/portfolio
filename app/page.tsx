@@ -66,7 +66,7 @@ export default function PageContent() {
               <PortfolioComponent />
             </div>
             {/* socials */}
-            <div className=" flex-col px-10 fixed top-[66%] hidden sm:flex">
+            <div className=" flex-col px-10 fixed top-[70%] hidden sm:flex">
               <div className="space-y-4 -ml-3 cursor-pointer">
                 <a
                   href="https://www.linkedin.com/in/michelle-anne-mendoza-03b95a232"
