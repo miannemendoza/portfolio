@@ -35,7 +35,7 @@ const Navbar = () => {
           <Image alt="Portfolio Icon" src={lm} width={55} height={55} />
         </div>
         <div className=" hidden sm:flex">
-          <ul className="flex space-x-4">
+          <ul className="flex space-x-4 cursor-pointer">
             <li
               className={` ${
                 selected === "about"
