@@ -19,11 +19,11 @@ const AboutMePage = () => {
               enjoy playing games or watching anime.
               <br />
               <span className="block mt-4">
-                I currently have 2 years of experience in Software Engineering
-                and Web Development. I am working on a dating application, where
-                I am responsible for building, implementing, and maintaining
-                features that enhance the user experience and ensure smooth
-                functionality.
+                I currently have over 2 years of experience in Software
+                Engineering and Web Development. I am working on a dating
+                application, where I am responsible for building, implementing,
+                and maintaining features that enhance the user experience and
+                ensure smooth functionality.
               </span>
             </p>
           </div>
