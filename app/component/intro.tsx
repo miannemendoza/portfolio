@@ -1,9 +1,20 @@
+"use client";
 import React, { useState } from "react";
 import { AiFillLinkedin } from "react-icons/ai";
 import { TypeAnimation } from "react-type-animation";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import wink from "../../public/wink.png";
+import hoh from "../../public/hoh.png";
+import hoh2 from "../../public/hoh2.png";
+import kiss from "../../public/kiss.png";
+const image: StaticImageData[] = [hoh, hoh2, kiss];
+const randomImage = (): StaticImageData => {
+  const number = Math.floor(Math.random() * image.length);
+  return image[number];
+};
 const IntroComponent = () => {
+  const [isHovering, setIsHovered] = useState(false);
+
   return (
     <section id="intro">
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-10 gap-4 w-auto text-left items-center mb-5">
@@ -39,12 +50,17 @@ const IntroComponent = () => {
         </div>
         {/* Image Area */}
         <div className="col-span-1 lg:col-span-5 flex justify-center lg:justify-end">
-          <div className="relative bg-gradient-to-r from-[#e31b6d] to-[#ff6a00] overflow-hidden rounded-full w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mb-20">
+          <div
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            className="relative bg-gradient-to-r from-[#e31b6d] to-[#ff6a00] overflow-hidden rounded-full w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mb-20"
+          >
             <Image
-              src={wink}
-              layout="fill"
-              objectFit="cover"
-              className="absolute top-0 left-0 w-full h-full rounded-full z-10"
+              src={isHovering ? randomImage() : wink}
+              width={500}
+              height={300}
+              priority
+              className="absolute top-0 left-0  rounded-full z-10"
               alt="Responsive Image"
             />
           </div>

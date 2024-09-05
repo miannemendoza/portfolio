@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const ExperienceComponent = () => {
   const [selected, setSelected] = useState<string>("hs");
-  console.log(selected);
+
   return (
     <>
       <div

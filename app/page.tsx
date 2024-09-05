@@ -15,6 +15,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import LoadingScreen from "./component/loading";
+import dayjs from "dayjs";
 export default function PageContent() {
   const [isLoading, setIsLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
@@ -120,8 +121,12 @@ export default function PageContent() {
                   </li>
                 </ul>
                 <span className="text-sm text-gray-500  dark:text-gray-400">
-                  © 2024{" "}
-                  <a href="https://flowbite.com/" className="hover:underline">
+                  © {dayjs().year()}{" "}
+                  <a
+                    href="https://www.linkedin.com/in/michelle-anne-mendoza-03b95a232"
+                    target="_blank"
+                    className="hover:underline"
+                  >
                     Michelle Anne F. Mendoza™
                   </a>
                   . All Rights Reserved.
