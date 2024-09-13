@@ -9,9 +9,6 @@ const ExperienceComponent = () => {
         className="dark:text-white  py-28 snap-center leading-8"
         id="experience"
       >
-        {/* <h1 className="lg:text-4xl py-1 text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-[#e31b6d] to-[#ff6a00]">
-          Experience
-        </h1> */}
         <h3 className="lg:text-4xl py-1 text-3xl font-bold ">Experience</h3>
         <p className="lg:text-base text-sm py-2 leading-8 text-gray-800 dark:text-white mb-3">
           Explore the companies and projects that have shaped my career:
