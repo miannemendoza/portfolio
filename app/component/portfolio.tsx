@@ -19,12 +19,12 @@ const PortfolioComponent = () => {
       <div className="grid grid-cols-10 gap-4 w-auto items-center  rounded-md p-3  text-[#ff6a00]">
         <div className="col-span-full md:col-span-5 flex-1">
           <Image
-            alt=""
             src={mk}
+            alt="MemeKaive project"
+            priority
             className="rounded-lg "
-            width={100}
-            height={100}
-            layout="responsive"
+            width={800}
+            height={800}
           />
         </div>
         <div className="col-span-full md:col-span-5 flex-1">
