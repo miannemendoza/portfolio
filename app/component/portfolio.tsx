@@ -1,6 +1,5 @@
 import React from "react";
 import mk from "../../public/MemeKaive.png";
-import db from "../../public/db.jpg";
 import Image from "next/image";
 import PillButton from "./shared/pill";
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -17,7 +16,7 @@ const PortfolioComponent = () => {
         </div>
       </div>
       <div className="grid grid-cols-10 gap-4 w-auto items-center  rounded-md p-3  text-[#ff6a00]">
-        <div className="col-span-full md:col-span-5 flex-1">
+        <div className="col-span-full lg:col-span-5 flex-1">
           <Image
             src={mk}
             alt="MemeKaive project"
@@ -27,7 +26,7 @@ const PortfolioComponent = () => {
             height={800}
           />
         </div>
-        <div className="col-span-full md:col-span-5 flex-1">
+        <div className="col-span-full lg:col-span-5 flex-1">
           <div className="flex flex-row items-center">
             <h1 className="sm:text-3xl text-2xl  font-medium">
               Meme Kaive &nbsp;{" "}
@@ -43,7 +42,7 @@ const PortfolioComponent = () => {
             meme library. Plus, you can easily sign in with Google.
             <br />
           </span>
-          <div className="mt-4 flex items-center">
+          <div className="mt-4 flex flex-wrap items-center gap-2">
             <PillButton value="NextJS" />
             <PillButton value="TailwindCSS" />
             <PillButton value="MongoDB" />
