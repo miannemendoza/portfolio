@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMePage = () => {
   const currentYear = new Date().getFullYear();
-  const startYear = 2022; // The year you started
+  const startYear = 2022; // The year I started
   const yearsOfExperience = currentYear - startYear;
   return (
     <>
@@ -12,26 +12,36 @@ const AboutMePage = () => {
           <div className="border-t border-gray-300 my-3 opacity-15" />
           <div>
             <p className="sm:text-base text-sm leading-8">
-              Hello! I'm Michelle, a <strong>Software Engineer</strong> with
+              Hi, I'm Michelle. I'm a <strong>Software Engineer</strong> with
               over {yearsOfExperience} years of experience in Web Development.
-              My journey into tech began when I came across a portfolio that inspired me to explore the world of web development.
-              That initial curiosity grew into a deep passion,  which led me to pursue a{" "}
-              <strong>Bachelor of Science in Information Technology</strong> from {" "}
-              <strong>Don Honorio Ventura State University</strong>.
+              My journey into tech started when I stumbled upon a portfolio that
+              completely blew my mind. I remember thinking, "Wait… people can
+              make stuff like this?" That one moment turned into hours of
+              Googling, tinkering with code, and eventually led me to earn a{" "}
+              <strong>Bachelor of Science in Information Technology</strong>{" "}
+              from <strong>Don Honorio Ventura State University</strong>.
               <br />
               <br />
-              Honestly, I started because I couldn't stand seeing poorly designed websites—misaligned text, overflowing content, 
-              and clunky layouts just didn’t sit right with me. 
-              I figured, "Why not be the one to fix that?" And that's what drove me to dive into web development.
+              Honestly, I got into this because I couldn't stand badly designed
+              websites. Misaligned text, buttons that don't work, weird
+              scrolling—it just bugged me. So I figured, "Why not be the one to
+              fix it?" That frustration turned into a passion for building
+              clean, usable interfaces.
               <br />
               <span className="block mt-4">
-                I'm currently working in the <strong>EdTech industry</strong>, where I help build tools that support thousands of teachers by easing their day-to-day workload. While I primarily focus on <strong>frontend development</strong>—crafting user-facing features that are intuitive, responsive, and performant—I occasionally dip into the backend to bring everything together. I enjoy solving real-world problems and building experiences that just work.
+                These days, I'm working in the <strong>EdTech industry</strong>,
+                helping build tools that make life easier for thousands of
+                teachers. I focus mostly on{" "}
+                <strong>frontend development</strong>, making sure everything
+                looks good, works well, and feels intuitive. When needed, I'll
+                jump into the backend to make sure everything plays nicely
+                together.
               </span>
               <span className="block mt-4">
                 Outside of work, I like to{" "}
-                <strong>unwind by playing games and watching anime</strong>.
-                These hobbies not only help me relax but also spark creativity
-                and new perspectives in my approach to development.
+                <strong>unwind with games and anime</strong>. It's how I
+                recharge—and sometimes, those creative worlds help me think
+                differently about solving real-life dev problems.
               </span>
             </p>
           </div>
