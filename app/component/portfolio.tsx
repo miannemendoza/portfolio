@@ -1,6 +1,7 @@
 import React from "react";
 import mk from "../../public/MemeKaive.png";
 import wtb from "../../public/wattthebill.png";
+import hl from "../../public/HL.png";
 import Image from "next/image";
 import PillButton from "./shared/pill";
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -52,7 +53,6 @@ const PortfolioComponent = () => {
         </div>
       </div>
       <div className="grid grid-cols-10 gap-4 w-auto items-center  rounded-md p-3  text-[#ff6a00]">
-       
         <div className="col-span-full lg:col-span-5 flex-1">
           <div className="flex flex-row items-center">
             <h1 className="sm:text-3xl text-2xl  font-medium">
@@ -64,10 +64,13 @@ const PortfolioComponent = () => {
           </div>
           <div className="border-t-2 border-gray-400  my-4"></div>
           <span className=" text-sm sm:text-base  text-white ">
-          WattTheBill is an electricity consumption calculator for the Philippines. 
-          Users can input appliance wattage (kWh) or horsepower (HP) and daily usage hours to estimate monthly electricity consumption and cost based on local kWh rates. 
-          Future updates will include comparisons between inverter and non-inverter appliances, offering deeper insights into 
-          energy efficiency and cost-saving opportunities.
+            WattTheBill is an electricity consumption calculator for the
+            Philippines. Users can input appliance wattage (kWh) or horsepower
+            (HP) and daily usage hours to estimate monthly electricity
+            consumption and cost based on local kWh rates. Future updates will
+            include comparisons between inverter and non-inverter appliances,
+            offering deeper insights into energy efficiency and cost-saving
+            opportunities.
             <br />
           </span>
           <div className="mt-4 flex flex-wrap items-center gap-2">
@@ -86,6 +89,44 @@ const PortfolioComponent = () => {
             width={800}
             height={800}
           />
+        </div>
+      </div>
+      <div className="grid grid-cols-10 gap-4 w-auto items-center  rounded-md p-3  text-[#ff6a00]">
+        <div className="col-span-full lg:col-span-5 flex-1">
+          <Image
+            src={hl}
+            alt="MemeKaive project"
+            priority
+            className="rounded-lg "
+            width={800}
+            height={800}
+          />
+        </div>
+        <div className="col-span-full lg:col-span-5 flex-1">
+          <div className="flex flex-row items-center">
+            <h1 className="sm:text-3xl text-2xl  font-medium">
+              Hustle Log &nbsp;{" "}
+            </h1>
+            <a href="https://hustle-log.vercel.app/login" target="_blank">
+              <FaExternalLinkAlt className="w-4 h-4" />
+            </a>
+          </div>
+          <div className="border-t-2 border-gray-400  my-4"></div>
+          <span className=" text-sm sm:text-base  text-white ">
+            Hustle Log — An intelligent job application tracker that uses AI to
+            analyze job postings, extracting key details so you don’t have to
+            fill them in manually. It streamlines your job search, helping you
+            stay organized and focused on landing your next role.
+            <br />
+          </span>
+          <div className="mt-4 flex flex-wrap items-center gap-2">
+            <PillButton value="NextJS" />
+            <PillButton value="Typescript" />
+            <PillButton value="TailwindCSS" />
+            <PillButton value="MongoDB" />
+            <PillButton value="NestJS" />
+            <PillButton value="OpenAI" />
+          </div>
         </div>
       </div>
       {/* <div className="grid grid-cols-10 gap-4 w-auto items-center  rounded-md p-3  text-[#ff6a00]">

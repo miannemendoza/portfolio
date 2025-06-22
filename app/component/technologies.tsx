@@ -9,11 +9,21 @@ const frontEndArray = [
   "Bootstrap",
   "HTML",
   "CSS",
-  "VueJS",  
+  "VueJS",
 ];
 
 const backendArray = ["Golang", "Javascript", "NextJS", "NestJS"];
-const toolsArray = ["VS Code","Cursor" ,"Docker", "Github", "Figma", "Postman"];
+const toolsArray = [
+  "VS Code",
+  "Cursor",
+  "Docker",
+  "Github",
+  "Figma",
+  "Postman",
+  "OpenAI",
+  "Git",
+  "Vercel",
+];
 const TechnologiesComponent = () => {
   return (
     <>
