@@ -14,8 +14,8 @@ const ExperienceComponent = () => {
           Explore the companies and projects that have shaped my career:
         </p>
         <div className="border-t border-gray-300 my-4 opacity-15" />
-        <div className="grid grid-cols-10 gap-1 w-auto items-center rounded-md p-3 text-[#ff6a00]">
-          <div className="relative col-span-full sm:col-span-2 sm:flex sm:flex-col text-center sm:items-end items-center sm:text-right">
+        <div className="flex flex-col sm:flex-row w-full items-center rounded-md p-3 text-[#ff6a00]">
+          <div className="relative w-auto sm:w-1/4 flex sm:flex-col text-center gap-5 sm:items-end sm:pr-4 items-center sm:text-right">
             {/* Companies */}
             <p
               className={`${
@@ -44,7 +44,7 @@ const ExperienceComponent = () => {
                 <p
                   className={`${
                     selected === "cb" && "font-bold"
-                  } text-sm sm:text-lg cursor-pointer ml-4 sm:ml-6 mb-1 mt-1`}
+                  } text-sm sm:text-lg cursor-pointer ml-4 sm:ml-6 mb-2`}
                   onClick={() => setSelected("cb")}
                 >
                   Carbonetes
@@ -52,7 +52,7 @@ const ExperienceComponent = () => {
                 <p
                   className={`${
                     selected === "sos" && "font-bold"
-                  } text-sm sm:text-lg cursor-pointer ml-4 sm:ml-6`}
+                  } text-sm sm:text-lg cursor-pointer ml-4 sm:ml-6 mb-2`}
                   onClick={() => setSelected("sos")}
                 >
                   S.O.Search
@@ -60,7 +60,7 @@ const ExperienceComponent = () => {
               </>
             )}
           </div>
-          <div className="col-span-full h-[28rem] sm:col-span-8 p-4 border-l bg-opacity-50 dark:bg-[#ffffff0a] text-white overflow-scroll no-scrollbar">
+          <div className=" h-[28rem] w-auto sm:w-3/4 p-4 border-l bg-opacity-50 dark:bg-[#ffffff0a] text-white overflow-scroll no-scrollbar">
             {selected === "inknoe" ? (
               <>
                 <h1 className="text-xl sm:text-2xl font-medium text-[#ff6a00]">
