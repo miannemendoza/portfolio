@@ -27,15 +27,19 @@ const ExperienceComponent = () => {
             </p>
             <p
               className={`${
-                selected === "hooli" || selected === "cb" || selected === "sos" ? "font-bold" : ""
+                selected === "hooli" || selected === "cb" || selected === "sos"
+                  ? "font-bold"
+                  : ""
               } text-sm sm:text-lg cursor-pointer mb-2`}
               onClick={() => setSelected("hooli")}
             >
               Hooli Software
             </p>
-            
+
             {/* Projects under Hooli - indented */}
-            {(selected === "hooli" || selected === "cb" || selected === "sos") && (
+            {(selected === "hooli" ||
+              selected === "cb" ||
+              selected === "sos") && (
               <>
                 <p
                   className={`${
@@ -56,7 +60,7 @@ const ExperienceComponent = () => {
               </>
             )}
           </div>
-          <div className="col-span-full h-96 sm:h-72 sm:col-span-8 p-4 border-l bg-opacity-50 dark:bg-[#ffffff0a] text-white overflow-scroll no-scrollbar">
+          <div className="col-span-full h-[28rem] sm:col-span-8 p-4 border-l bg-opacity-50 dark:bg-[#ffffff0a] text-white overflow-scroll no-scrollbar">
             {selected === "inknoe" ? (
               <>
                 <h1 className="text-xl sm:text-2xl font-medium text-[#ff6a00]">
@@ -66,12 +70,37 @@ const ExperienceComponent = () => {
                   November 2024 - Present
                 </p>
                 <ul className="pl-5 text-sm sm:text-base leading-8">
-                <li className="list-disc">Led the development of an AI-powered Assignment Grader using OpenAI and LangChain, enabling teachers to create assignments and receive real-time feedback. Built with NestJS, MongoDB, Next.js, Tailwind CSS, and ShadCN.</li>
-                <li className="list-disc">Delivered an AI-enhanced bulk upload feature that parses student names from filenames, reducing manual input and accelerating grading workflows.</li>
-                <li className="list-disc">Created a Reading Activity Generator that outputs reading passages, vocabulary lists, and quizzes from a single prompt—helping teachers generate engaging, custom materials quickly.</li>
-                <li className="list-disc">Built an export system supporting Google Docs/Slides, Microsoft Word/PowerPoint, and PDF formats for seamless sharing and content reuse.</li>
-                <li className="list-disc">Improved performance and UX across features by optimizing rendering logic and resolving UI flickering.</li>
-                <li className="list-disc">Contributed to architectural decisions, conducted independent QA, and mentored new developers on best practices and onboarding.</li>
+                  <li className="list-disc">
+                    Led the development of an AI-powered Assignment Grader using
+                    OpenAI and LangChain, enabling teachers to create
+                    assignments and receive real-time feedback. Built with
+                    NestJS, MongoDB, Next.js, Tailwind CSS, and ShadCN.
+                  </li>
+                  <li className="list-disc">
+                    Delivered an AI-enhanced bulk upload feature that parses
+                    student names from filenames, reducing manual input and
+                    accelerating grading workflows.
+                  </li>
+                  <li className="list-disc">
+                    Created a Reading Activity Generator that outputs reading
+                    passages, vocabulary lists, and quizzes from a single
+                    prompt—helping teachers generate engaging, custom materials
+                    quickly.
+                  </li>
+                  <li className="list-disc">
+                    Built an export system supporting Google Docs/Slides,
+                    Microsoft Word/PowerPoint, and PDF formats for seamless
+                    sharing and content reuse.
+                  </li>
+                  <li className="list-disc">
+                    Improved performance and UX across features by optimizing
+                    rendering logic and resolving UI flickering.
+                  </li>
+                  <li className="list-disc">
+                    Contributed to architectural decisions, conducted
+                    independent QA, and mentored new developers on best
+                    practices and onboarding.
+                  </li>
                 </ul>
               </>
             ) : selected === "hooli" ? (
@@ -83,7 +112,8 @@ const ExperienceComponent = () => {
                   June 2022 - October 2024
                 </p>
                 <p className="text-sm sm:text-base">
-                  Worked as a Full-Stack Software Engineer, contributing to two key projects: Carbonetes and Significant Other Search.
+                  Worked as a Full-Stack Software Engineer, contributing to two
+                  key projects: Carbonetes and Significant Other Search.
                 </p>
                 <p className="text-sm sm:text-base mt-4">
                   Select a project on the left to see specific contributions.
