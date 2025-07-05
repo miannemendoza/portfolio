@@ -17,7 +17,7 @@ const PortfolioComponent = () => {
           <div className="border-t border-gray-300 my-4 opacity-15" />
         </div>
       </div>
-      <div className="grid grid-cols-10 gap-4 w-auto items-center  rounded-md p-3  text-[#ff6a00]">
+      <div className="grid grid-cols-10 gap-4 w-auto items-center  rounded-md p-3  text-[#ff6a00] mb-5  ">
         <div className="col-span-full lg:col-span-5 flex-1">
           <Image
             src={mk}
@@ -52,8 +52,19 @@ const PortfolioComponent = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-10 gap-4 w-auto items-center  rounded-md p-3  text-[#ff6a00]">
-        <div className="col-span-full lg:col-span-5 flex-1">
+      {/* Project2 */}
+      <div className="flex flex-col lg:flex-row-reverse gap-4 w-auto items-center rounded-md p-3 text-[#ff6a00] mb-5  ">
+        <div className="w-full lg:w-1/2">
+          <Image
+            src={wtb}
+            alt="Watt the Bill project"
+            priority
+            className="rounded-lg"
+            width={800}
+            height={800}
+          />
+        </div>
+        <div className="w-full lg:w-1/2">
           <div className="flex flex-row items-center">
             <h1 className="sm:text-3xl text-2xl  font-medium">
               Watt the Bill &nbsp;{" "}
@@ -63,7 +74,7 @@ const PortfolioComponent = () => {
             </a>
           </div>
           <div className="border-t-2 border-gray-400  my-4"></div>
-          <span className=" text-sm sm:text-base  text-white ">
+          <span className="text-sm sm:text-base text-white">
             WattTheBill is an electricity consumption calculator for the
             Philippines. Users can input appliance wattage (kWh) or horsepower
             (HP) and daily usage hours to estimate monthly electricity
@@ -80,18 +91,9 @@ const PortfolioComponent = () => {
             <PillButton value="HeroUI" />
           </div>
         </div>
-        <div className="col-span-full lg:col-span-5 flex-1">
-          <Image
-            src={wtb}
-            alt="Watt the Bill project"
-            priority
-            className="rounded-lg "
-            width={800}
-            height={800}
-          />
-        </div>
       </div>
-      <div className="grid grid-cols-10 gap-4 w-auto items-center  rounded-md p-3  text-[#ff6a00]">
+      {/* Project3 */}
+      <div className="grid grid-cols-10 gap-4 w-auto items-center  rounded-md p-3  text-[#ff6a00] mb-5  ">
         <div className="col-span-full lg:col-span-5 flex-1">
           <Image
             src={hl}
