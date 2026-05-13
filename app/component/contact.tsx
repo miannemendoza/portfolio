@@ -6,11 +6,21 @@ type FormState = "idle" | "loading" | "success" | "error";
 
 const ContactComponent = () => {
   const formRef = useRef<HTMLFormElement>(null);
+  const formOpenedAtRef = useRef(Date.now());
   const [formState, setFormState] = useState<FormState>("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formRef.current) return;
+
+    const formData = new FormData(formRef.current);
+    const honeypotValue = String(formData.get("website") ?? "").trim();
+    const elapsedMs = Date.now() - formOpenedAtRef.current;
+
+    if (honeypotValue || elapsedMs < 3000) {
+      setFormState("error");
+      return;
+    }
 
     setFormState("loading");
 
@@ -23,6 +33,7 @@ const ContactComponent = () => {
       );
       setFormState("success");
       formRef.current.reset();
+      formOpenedAtRef.current = Date.now();
     } catch {
       setFormState("error");
     }
@@ -42,13 +53,27 @@ const ContactComponent = () => {
         {formState === "success" ? (
           <div className="flex flex-col items-center justify-center gap-4 w-full p-12 sm:p-16 rounded-2xl bg-black bg-opacity-50 dark:bg-[#ffffff0a] dark:backdrop-blur-md border border-transparent dark:border-white/10 shadow-sm text-center animate-in fade-in zoom-in duration-500">
             <div className="w-16 h-16 bg-gradient-to-r from-[#e31b6d] to-[#ff6a00] rounded-full flex items-center justify-center text-white mb-2 shadow-lg">
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+              <svg
+                className="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={3}
+                  d="M5 13l4 4L19 7"
+                />
               </svg>
             </div>
-            <h4 className="text-2xl font-bold text-gray-200 dark:text-white">Message Sent!</h4>
+            <h4 className="text-2xl font-bold text-gray-200 dark:text-white">
+              Message Sent!
+            </h4>
             <p className="text-gray-300 dark:text-gray-300 max-w-md">
-              Thank you for reaching out. Your message has been received successfully, and I'll get back to you as soon as possible.
+              Thank you for reaching out. Your message has been received
+              successfully, and I'll get back to you as soon as possible.
             </p>
             {/* <button
               onClick={() => setFormState("idle")}
@@ -63,9 +88,28 @@ const ContactComponent = () => {
             onSubmit={handleSubmit}
             className="flex flex-col gap-5 w-full p-6 sm:p-8 rounded-2xl bg-black bg-opacity-50 dark:bg-[#ffffff0a] dark:backdrop-blur-md border border-transparent dark:border-white/10 shadow-sm"
           >
+            <div
+              aria-hidden="true"
+              className="absolute left-[-9999px] top-auto h-0 w-0 overflow-hidden"
+            >
+              <label htmlFor="website">Website</label>
+              <input
+                id="website"
+                type="text"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-5">
               <div className="flex flex-col gap-1.5 flex-1">
-                <label htmlFor="from_name" className="text-sm font-medium text-gray-200 dark:text-gray-300">Name</label>
+                <label
+                  htmlFor="from_name"
+                  className="text-sm font-medium text-gray-200 dark:text-gray-300"
+                >
+                  Name
+                </label>
                 <input
                   id="from_name"
                   type="text"
@@ -76,7 +120,12 @@ const ContactComponent = () => {
                 />
               </div>
               <div className="flex flex-col gap-1.5 flex-1">
-                <label htmlFor="reply_to" className="text-sm font-medium text-gray-200 dark:text-gray-300">Email</label>
+                <label
+                  htmlFor="reply_to"
+                  className="text-sm font-medium text-gray-200 dark:text-gray-300"
+                >
+                  Email
+                </label>
                 <input
                   id="reply_to"
                   type="email"
@@ -87,9 +136,14 @@ const ContactComponent = () => {
                 />
               </div>
             </div>
-            
+
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="subject" className="text-sm font-medium text-gray-200 dark:text-gray-300">Subject</label>
+              <label
+                htmlFor="subject"
+                className="text-sm font-medium text-gray-200 dark:text-gray-300"
+              >
+                Subject
+              </label>
               <input
                 id="subject"
                 type="text"
@@ -101,7 +155,12 @@ const ContactComponent = () => {
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="message" className="text-sm font-medium text-gray-200 dark:text-gray-300">Message</label>
+              <label
+                htmlFor="message"
+                className="text-sm font-medium text-gray-200 dark:text-gray-300"
+              >
+                Message
+              </label>
               <textarea
                 id="message"
                 name="message"
