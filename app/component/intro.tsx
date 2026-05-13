@@ -1,6 +1,5 @@
 "use client";
-import React, { useState } from "react";
-import { AiFillLinkedin } from "react-icons/ai";
+import React, { useState } from "react"; 
 import { TypeAnimation } from "react-type-animation";
 import Image, { StaticImageData } from "next/image";
 import wink from "../../public/wink.png";
@@ -14,6 +13,7 @@ const randomImage = (): StaticImageData => {
 };
 const IntroComponent = () => {
   const [isHovering, setIsHovered] = useState(false);
+  const [hoverImage, setHoverImage] = useState<StaticImageData>(randomImage());
 
   return (
     <section id="intro">
@@ -28,12 +28,7 @@ const IntroComponent = () => {
             Michelle Anne F. Mendoza
           </h1>
           <TypeAnimation
-            sequence={[
-              "Software Engineer   ",
-              2000,
-              "Web Developer   ",
-              2000,
-            ]}
+            sequence={["Software Engineer   ", 2000, "Web Developer   ", 2000]}
             omitDeletionAnimation={true}
             wrapper="span"
             cursor={true}
@@ -49,12 +44,15 @@ const IntroComponent = () => {
         {/* Image Area */}
         <div className="col-span-1 mt-5 lg:col-span-5 flex justify-center lg:justify-end">
           <div
-            onMouseEnter={() => setIsHovered(true)}
+            onMouseEnter={() => {
+              setHoverImage(randomImage());
+              setIsHovered(true);
+            }}
             onMouseLeave={() => setIsHovered(false)}
             className="relative bg-gradient-to-r from-[#e31b6d] to-[#ff6a00] overflow-hidden rounded-full w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mb-20"
           >
             <Image
-              src={isHovering ? randomImage() : wink}
+              src={isHovering ? hoverImage : wink}
               width={500}
               height={300}
               priority

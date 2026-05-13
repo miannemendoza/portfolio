@@ -11,6 +11,7 @@ import lm from "../public/lm.png";
 import Navbar from "./component/navbar";
 import { Suspense, useEffect, useState } from "react";
 import AboutMePage from "./component/aboutMe";
+import ContactComponent from "./component/contact";
 import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
@@ -65,6 +66,7 @@ export default function PageContent() {
               <TechnologiesComponent />
               <ExperienceComponent />
               <PortfolioComponent />
+              <ContactComponent />
             </div>
             {/* socials */}
             <div className=" flex-col px-10 fixed top-[70%] hidden sm:flex">

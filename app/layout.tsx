@@ -1,13 +1,14 @@
 import { Inter, Archivo, Rubik } from "next/font/google";
 import "./globals.css";
-import { useState, useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 const archivo = Archivo({ subsets: ["latin"] });
 const rubik = Rubik({ subsets: ["latin"] });
+
 export const metadata = {
-  title: "Michelle Mendoza Portfolio",
-  description: "Come check my portfolio!",
+  title: "Michelle Mendoza | Software Engineer",
+  description:
+    "Portfolio of Michelle Anne F. Mendoza — Software Engineer specializing in frontend development with React, Next.js, and TypeScript.",
 };
 
 export default function RootLayout({ children }) {
